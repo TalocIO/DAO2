@@ -1,0 +1,14 @@
+{
+  "name": "DAO2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://ftank90: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@github.com/ftank90/DAO2.git",
+  "author": "Francisco <frankyautran@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "hardhat": "^2.10.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.2"
+  }
+}
