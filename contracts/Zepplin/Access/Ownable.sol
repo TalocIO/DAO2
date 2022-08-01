@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.7.0) (access/Ownable.sol)
+// https://docs.openzeppelin.com/contracts/4.x/access-control 
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.7.3;
 
 import "../utils/Context.sol";
 
