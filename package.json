@@ -2,8 +2,7 @@
   "name": "DAO2",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://ftank90: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@github.com/ftank90/DAO2.git",
-  "author": "Francisco <frankyautran@gmail.com>",
+  "author": "Francisco",
   "license": "MIT",
   "devDependencies": {
     "@ethersproject/abi": "^5.6.4",

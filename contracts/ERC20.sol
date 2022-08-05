@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: MIT
 // this was made using open zepplin wizard. this is a general template for erc 20 
-//test2
 
 pragma solidity ^0.7.3;
 
