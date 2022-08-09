@@ -8,6 +8,8 @@ constructor () {
 
 };
 
-function purchase (string voters_decision, )
+function purchase (string voters_decision, ) private returns () {
 
-}
+};
+
+};
