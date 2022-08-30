@@ -1,4 +1,4 @@
-//sample TS for deploying contracts 
+//sample TS for deploying regular contracts 
 //https://hardhat.org/hardhat-runner/docs/guides/deploying
 // https://hardhat.org/hardhat-runner/docs/advanced/scripts 
 
