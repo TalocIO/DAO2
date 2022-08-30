@@ -4,6 +4,8 @@
 
 d_storage = 'conenction' 
 
+metamask = 'connection' 
+
 pragma solidity ^0.7.3;
 
 contract registration () { 
@@ -12,6 +14,23 @@ contract registration () {
         constructor() {
 
     }; 
+
+    //upgradebale 
+     uint256 private value;
+
+    // upgradebale - Emitted when the stored value changes
+    event ValueChanged(uint256 newValue);
+
+    // upgradebale - Stores a new value in the contract
+    function store(uint256 newValue) public {
+        value = newValue;
+        emit ValueChanged(newValue);
+    };
+
+    // upgradebale  - Reads the last stored value
+    function retrieve() public view returns (uint256) {
+        return value;
+    };
 
     function create_member () returns (bool member_created) {
         uint256 member_ID = ;
@@ -23,7 +42,9 @@ contract registration () {
         bool member_created = ["true", "false"] ;
 
 
-//will be listening for event on the FE, when user clicks "join" button 
+//will be listening for event webhook on the FE, when user clicks "join" button 
+        event.listening ()
+        
 //will create a "member" struct and auto generate a member_ID - with the following: 
 
     struct member [ member_ID, wallet_address, KYC_status = 'pending' , member_status = 'pending', 
@@ -35,7 +56,7 @@ contract registration () {
 
     function location_validator (string user_location) pure returns (bool memory location_validated) {
         bool location_validated = ["true", "false"];
-        struct user_location = ["state", "zip_code"]
+        struct user_location = ["state", "zip_code"];
 
         //listening for event "KYC_status' updated from 'pending' to 'approved'
         event.listening ()
@@ -52,7 +73,7 @@ contract registration () {
             if location_validated = true 
                  then write to 'd_storage' update 'match' = YES
                  else };
-
+ 
 
 
 
@@ -60,7 +81,8 @@ contract registration () {
         returns(bool member_approved) {
             bool member_approved =  ["true", "false"];
 
-            //listening for event, what triggers this ? 
+            //listening for event, (what triggers this ?)
+            //maybe a trigger from d_storage, when "match" is updated from "no", to "yes"
              event.listening ()
 
         return member_approved ;
@@ -71,12 +93,26 @@ contract registration () {
 
 
 
+    function connect_wallet (bool wallet_started, bool wallet_complete) 
+        returns (address wallet_address) {
+            bool wallet_started = ['true', 'false'];
+            bool wallet_complete = ['true', 'false'];
+            address wallet_address = [];
+
+    //listening for event on the FE when user clicks "connect wallet" will send wallet_started = "true"
+        event.listening ()
+
+        when 'metamask' sends 'wallet address' update 'wallet_complete' = true
+
+         return wallet_address; };
+
+
 
     function registration ( bool discord_reg, address wallet_address, bool member_approved ) private 
         returns(bool registration_complete)  { 
             bool registration_complete = ["true", "false"];
 
-            //listening for event, what triggers this ? 
+            //listening for event webhook on the FE, when user clicks "join discord" button   
              event.listening ()
 
             return registration_complete ;

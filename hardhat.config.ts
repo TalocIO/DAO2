@@ -2,6 +2,7 @@
 /** @type import('hardhat/config').HardhatUserConfig */
 
 import "@nomiclabs/hardhat-toolbox";
+import '@openzeppelin/hardhat-upgrades';
 
 
 module.exports = {
