@@ -32,6 +32,8 @@ contract registration () {
         return value;
     };
 
+    event join (); 
+
     function create_member () returns (bool member_created) {
         uint256 member_ID = ;
         address wallet_address = ;
@@ -43,8 +45,8 @@ contract registration () {
 
 
 //will be listening for event webhook on the FE, when user clicks "join" button 
-        event.listening ()
-        
+        event.listening (join);
+ 
 //will create a "member" struct and auto generate a member_ID - with the following: 
 
     struct member [ member_ID, wallet_address, KYC_status = 'pending' , member_status = 'pending', 
