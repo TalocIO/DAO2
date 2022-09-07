@@ -1,14 +1,18 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.7.3;
+pragma solidity ^0.8.4;
 
-contract purchase () {
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-constructor () {
+contract purchase is Initializable () {
 
-};
+constructor () { _disableInitializers();
+}
 
-    //upgradebale 
+//use this initializer function instead of a constructor
+function initialize() initializer public  {  
+    
+     //upgradebale 
      uint256 private value;
 
     // upgradebale - Emitted when the stored value changes
@@ -24,9 +28,11 @@ constructor () {
     function retrieve() public view returns (uint256) {
         return value;
     };
+}
 
-function purchase (string voters_decision, ) private returns () {
 
-};
+    function purchase (string voters_decision, ) private returns () {
+
+    };
 
 };

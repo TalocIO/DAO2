@@ -1,29 +1,36 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.7.3;
+pragma solidity ^0.8.4;
 
-contract digitize () {
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 
-constructor () {
+contract digitize is Initializable () {
 
-};
 
-    //upgradebale 
-     uint256 private value;
+    constructor () { _disableInitializers(); 
+    }
 
-    // upgradebale - Emitted when the stored value changes
-    event ValueChanged(uint256 newValue);
+     //use this initializer function instead of a constructor, #initializer ensures contract does not get initialized multiple times,
+    function initialize() initializer public  {
 
-    // upgradebale - Stores a new value in the contract
-    function store(uint256 newValue) public {
-        value = newValue;
-        emit ValueChanged(newValue);
-    };
+        //upgradebale 
+        uint256 private value;
 
-    // upgradebale  - Reads the last stored value
-    function retrieve() public view returns (uint256) {
-        return value;
-    };
+        // upgradebale - Emitted when the stored value changes
+        event ValueChanged(uint256 newValue);
+
+        // upgradebale - Stores a new value in the contract
+        function store(uint256 newValue) public {
+            value = newValue;
+            emit ValueChanged(newValue);
+        };
+
+        // upgradebale  - Reads the last stored value
+        function retrieve() public view returns (uint256) {
+            return value;
+        };
+    }
+
 
 }
