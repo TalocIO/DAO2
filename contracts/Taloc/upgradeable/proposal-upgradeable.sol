@@ -2,10 +2,18 @@
 
 pragma solidity ^0.8.4;
 
-contract proposal() {
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-constructor () {
+contract proposal is Initializable () {
+
+constructor () { _disableInitializers();
 }
+
+ //use this initializer function instead of a constructor
+function initialize() initializer public  {
+    
+  
+};
 
 
 function member_proposal () {

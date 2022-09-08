@@ -2,10 +2,20 @@
 
 pragma solidity ^0.8.4;
 
-contract payment () {
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-    constructor () { 
+contract payment is Initializable () {
+
+    constructor () { _disableInitializers(); 
     }
+
+    //use this initializer function instead of a constructor
+    function initialize() initializer public  {
+
+      
+    };
+
+
 
 
         function purchase_coin () {

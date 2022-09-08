@@ -1,4 +1,6 @@
 //samples for deploying an upgradebale contract called box
+//these deploy scripts are able to be executed using the open zepplin/upgrades plugin 
+
 
 // sample 1 - https://docs.openzeppelin.com/learn/upgrading-smart-contracts#upgrading-a-contract-via-plugins 
 const { ethers, upgrades } = require('hardhat');
@@ -64,4 +66,18 @@ main().catch((error) => {
 })
 
 
+//https://github.com/OpenZeppelin/openzeppelin-upgrades 
+const { ethers, upgrades } = require("hardhat");
 
+async function main() {
+  // Deploying
+  const Box = await ethers.getContractFactory("Box");
+  const instance = await upgrades.deployProxy(Box, [42]);
+  await instance.deployed();
+
+  // Upgrading
+  const BoxV2 = await ethers.getContractFactory("BoxV2");
+  const upgraded = await upgrades.upgradeProxy(instance.address, BoxV2);
+}
+
+main();

@@ -1,16 +1,15 @@
-//regular erc1155 
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
-import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
-import "@openzeppelin/contracts/access/AccessControl.sol";
-import "@openzeppelin/contracts/security/Pausable.sol";
-import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol";
-import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Supply.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155Upgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155BurnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155SupplyUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 /// @custom:security-contact info@taloc.io
-contract Taloc is ERC1155, AccessControl, Pausable, ERC1155Burnable, ERC1155Supply {
+contract Taloc is Initializable, ERC1155Upgradeable, AccessControlUpgradeable, PausableUpgradeable, ERC1155BurnableUpgradeable, ERC1155SupplyUpgradeable {
     bytes32 public constant URI_SETTER_ROLE = keccak256("URI_SETTER_ROLE");
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
@@ -21,7 +20,18 @@ contract Taloc is ERC1155, AccessControl, Pausable, ERC1155Burnable, ERC1155Supp
     uint256 public constant SWORD = 3;
     uint256 public constant SHIELD = 4;
 
-    constructor() ERC1155("taloc.io") {
+    /// @custom:oz-upgrades-unsafe-allow constructor
+    constructor() {
+        _disableInitializers();
+    }
+
+    function initialize() initializer public {
+        __ERC1155_init("taloc.io");
+        __AccessControl_init();
+        __Pausable_init();
+        __ERC1155Burnable_init();
+        __ERC1155Supply_init();
+
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(URI_SETTER_ROLE, msg.sender);
         _grantRole(PAUSER_ROLE, msg.sender);
@@ -33,7 +43,6 @@ contract Taloc is ERC1155, AccessControl, Pausable, ERC1155Burnable, ERC1155Supp
         mint(msg.sender, SWORD, 10**9, "");
         mint(msg.sender, SHIELD, 10**9, "");
     }
-    }
 
     function setURI(string memory newuri) public onlyRole(URI_SETTER_ROLE) {
         _setURI(newuri);
@@ -42,7 +51,7 @@ contract Taloc is ERC1155, AccessControl, Pausable, ERC1155Burnable, ERC1155Supp
     function pause() public onlyRole(PAUSER_ROLE) {
         _pause();
     }
-function unpause() public onlyRole(PAUSER_ROLE) {
+     function unpause() public onlyRole(PAUSER_ROLE) {
         _unpause();
     }
 
@@ -63,7 +72,7 @@ function unpause() public onlyRole(PAUSER_ROLE) {
     function _beforeTokenTransfer(address operator, address from, address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)
         internal
         whenNotPaused
-        override(ERC1155, ERC1155Supply)
+        override(ERC1155Upgradeable, ERC1155SupplyUpgradeable)
     {
         super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
     }
@@ -73,9 +82,9 @@ function unpause() public onlyRole(PAUSER_ROLE) {
     function supportsInterface(bytes4 interfaceId)
         public
         view
-        override(ERC1155, AccessControl)
+        override(ERC1155Upgradeable, AccessControlUpgradeable)
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
-    } 
+    }
 }

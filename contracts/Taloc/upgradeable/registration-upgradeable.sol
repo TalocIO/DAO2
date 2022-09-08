@@ -3,16 +3,24 @@
 
 pragma solidity ^0.8.4;
 
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+
 import '@//need to import KYC oracle here'; 
 import 'd_storage = conenction';
 import 'metamask = connection';
 
-contract registration () { 
+contract registration is Initializable () { 
 
 
     constructor() {
+        _disableInitializers();
 
     }; 
+
+     //use this initializer function instead of a constructor
+    function initialize() initializer public  {
+
+    };
 
 
         event join (); 

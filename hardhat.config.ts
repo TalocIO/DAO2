@@ -3,6 +3,8 @@
 
 import "@nomiclabs/hardhat-toolbox";
 import '@openzeppelin/hardhat-upgrades';
+import '@nomiclabs/hardhat-etherscan';
+import '@openzeppelin/contracts-upgradeable'
 
 
 module.exports = {
