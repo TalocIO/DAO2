@@ -1,15 +1,11 @@
-//sample TS for deploying regular contracts 
+//https://hardhat.org/hardhat-runner/docs/getting-started#deploying-your-contracts 
+
+//(more info) -  
 //https://hardhat.org/hardhat-runner/docs/guides/deploying
-// https://hardhat.org/hardhat-runner/docs/advanced/scripts 
+//https://hardhat.org/hardhat-runner/docs/advanced/scripts 
 
-//// We require the Hardhat Runtime Environment explicitly here. This is optional
-// but useful for running the script in a standalone fashion through `node <script>`.
-// You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
-// will compile your contracts, add the Hardhat Runtime Environment's members to the
-// global scope, and execute the script.
+//sample TS for deploying regular contracts
 
-
-//const hre = require("hardhat");
 import { ethers } from "hardhat";
 
 async function main() {
