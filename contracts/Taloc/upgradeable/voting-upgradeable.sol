@@ -5,9 +5,17 @@ pragma solidity ^0.8.4;
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 
-contract voting () {
+contract voting is Initializable () {
 
-    constructor() {};  
+    constructor() {
+        _disableInitializers();
+
+    }; 
+
+     //use this initializer function instead of a constructor
+    function initialize() initializer public  {
+
+    };
 
 
         //if else logic needs to be refined , just sudo code 

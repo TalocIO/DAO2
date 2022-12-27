@@ -4,12 +4,11 @@ pragma solidity ^0.8.4;
 
 contract purchase () {
 
-constructor () {
-}
+    constructor () {}; 
 
 
-    function purchase (string voters_decision, ) private returns () {
+        function purchase (string voters_decision, ) private returns () {
 
-    };
+        };
 
 };

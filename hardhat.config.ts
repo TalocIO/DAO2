@@ -43,6 +43,8 @@ module.exports = {
     sources: "./contracts",
     tests: "./test",
     cache: "./cache",
+    scripts: "./scripts",
+    app: "./my-app",
     artifacts: "./artifacts"
   },
   mocha: {
