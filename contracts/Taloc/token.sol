@@ -61,7 +61,7 @@ contract Taloc is ERC1155, AccessControl, Pausable, ERC1155Burnable, ERC1155Supp
   
     }
     
-    //will need to figure out how to mint NFT's on demand, { ex: mint when user loads deed into IFPS}
+    //will need to figure out how to mint NFT's on demand, { ex: mint when user loads deed into IFPS} (((see mint.sol)))
     //will also need to figure out how to fractionalize that one NFT value at the time of mint (perhaps semi fungible tokens ? )
 
         function gePropertyVRF () {
