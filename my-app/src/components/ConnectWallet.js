@@ -44,9 +44,7 @@ const ConnectWallet = () => {
           <button onClick={handleClick('MetaMask')} disabled={isConnecing}>
             Connect on MetaMask
           </button>
-          <button onClick={handleClick('Portis')} disabled={isConnecing}>
-            Connect on Portis
-          </button>
+          
         </>
       )}
       {!active && error && <button onClick={handleRetry}>Retry</button>}
