@@ -5,11 +5,13 @@ test('render', async () => {
   render(<App />);
 
   await waitFor(() => {
-    expect(screen.getByText(/Taloc IO/i)).toBeInTheDocument();
+    expect(screen.getByText(/Create React Ethereum DApp/i)).toBeInTheDocument();
   });
   expect(screen.getByText(/active:/i)).toBeInTheDocument();
   expect(
-    screen.getByRole('button', { name: 'Connect Wallet' })
+    screen.getByRole('button', { name: 'Connect on MetaMask' })
   ).toBeInTheDocument();
-  
+  expect(
+    screen.getByRole('button', { name: 'Connect on Portis' })
+  ).toBeInTheDocument();
 });
