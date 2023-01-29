@@ -4,8 +4,8 @@ const WalletInfo = () => {
   const { active, chainId, account, error } = useWeb3React();
   return (
     <div className="wallet-info">
-      <p>Taloc</p> <img src="favicon.ico" width="50" 
-     height="50"></img>
+      <p>Taloc</p> <img src="favicon.ico" width="70" 
+     height="70" class="logo"></img> 
       {active && (
         <div>
           <p>Account: {account}</p>
