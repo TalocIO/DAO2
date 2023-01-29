@@ -4,12 +4,12 @@ const WalletInfo = () => {
   const { active, chainId, account, error } = useWeb3React();
   return (
     <div className="wallet-info">
-      <p>Create React Ethereum DApp</p>
-      <p>active: {active.toString()}</p>
+      <p>Taloc</p> <img src="favicon.ico" width="50" 
+     height="50"></img>
       {active && (
         <div>
-          <p>account: {account}</p>
-          <p>chainId: {chainId}</p>
+          <p>Account: {account}</p>
+      
         </div>
       )}
       {error && <p className="text-error">error: {error.message}</p>}

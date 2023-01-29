@@ -9,9 +9,7 @@ test('render', async () => {
   });
   expect(screen.getByText(/active:/i)).toBeInTheDocument();
   expect(
-    screen.getByRole('button', { name: 'Connect on MetaMask' })
+    screen.getByRole('button', { name: 'Connect Wallet' })
   ).toBeInTheDocument();
-  expect(
-    screen.getByRole('button', { name: 'Connect on Portis' })
-  ).toBeInTheDocument();
+ 
 });
