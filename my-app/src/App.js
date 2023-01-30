@@ -3,11 +3,10 @@ import { Web3Provider } from '@ethersproject/providers';
 
 import ConnectWallet from './components/ConnectWallet';
 import WalletInfo from './components/WalletInfo';
-import sidebar from './sidebar';
-
-
 import './App.css';
-import { Sidebar } from 'react-pro-sidebar';
+import Sidebar from './components/Sidebar';
+
+
 
 const getLibrary = (provider) => {
   const library = new Web3Provider(provider);
@@ -28,3 +27,4 @@ function App() {
 }
 
 export default App;
+ 
