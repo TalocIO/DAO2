@@ -1,10 +1,14 @@
 import React from 'react'
 import '../App.css';
+import Main from './Main';
+
 
 import {SidebarData} from './SidebarData'
 
 function Sidebar () {
     return (
+        <div className='Content'>
+            <div className='container'>
         <div className='Sidebar'>
             <ul className='SidebarList'>
            {SidebarData.map((val, key)=> {
@@ -21,6 +25,10 @@ function Sidebar () {
             );
            })}
            </ul>
+        </div>
+        </div>
+        
+        <Main />
         </div>
     );
 }

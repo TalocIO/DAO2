@@ -4,7 +4,7 @@
   flex-direction: column;
   background-color: #242A35;
   margin: none;
-  height: 100vh;
+  
   width: 100vw;
 }
 
@@ -49,12 +49,13 @@
   
   display:block;
   background-color: #f1f3f5;
-  border-radius: 50%;
+  border-radius: 50% !important;
   cursor: pointer;
   transition: opacity 0.3s ease;
-  
+  padding: 0px;
 
 }
+
 
 .button-disconnect {
   background-color: #ffc9c9;
@@ -90,11 +91,15 @@ p:first-of-type{
   margin-top: 10px;
 }
 
+
+
 .Sidebar {
+  display: inline-block;
   height: 100%;
   width: 150px;
   background-color: #1f242e;
   align-items: left;
+  
 }
 
 .SidebarList {
@@ -138,3 +143,29 @@ align-items: center;
   flex: 70%; 
   
 }
+
+
+
+.Content {
+
+  display: flex;
+  justify-items: center;
+}
+
+
+.container {
+
+  display: inline-block;
+  flex: 1;
+}
+
+
+.Main {
+  display: inline-block;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  
+}
+
+
