@@ -3,6 +3,7 @@ import '../App.css';
 import Main from './Main';
 
 
+
 import {SidebarData} from './SidebarData'
 
 function Sidebar () {
@@ -29,6 +30,7 @@ function Sidebar () {
         </div>
         
         <Main />
+
         </div>
     );
 }
