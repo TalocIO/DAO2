@@ -145,7 +145,7 @@ export const themeSettings = (mode) => {
               default: colors.primary[500]
             }
           }
-          : {
+        : {
             // palette values for light mode
             primary: {
               main: colors.primary[100]
@@ -173,7 +173,6 @@ export const themeSettings = (mode) => {
       h2: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontSize: 32
-        
       },
       h3: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
@@ -181,8 +180,7 @@ export const themeSettings = (mode) => {
       },
       h4: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
-        fontSize: 20,
-        
+        fontSize: 20
       },
       h5: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),

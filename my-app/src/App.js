@@ -10,6 +10,7 @@ import Home from './components/Home' //Used in Main
 
 
 
+
 const getLibrary = (provider) => {
   const library = new Web3Provider(provider);
   library.pollingInterval = 8000;
@@ -18,6 +19,7 @@ const getLibrary = (provider) => {
 
 function App() {
   return (
+    
     <Web3ReactProvider getLibrary={getLibrary}>
       <div className="App">
         <WalletInfo />
@@ -25,6 +27,8 @@ function App() {
         <Sidebar />
       </div>
     </Web3ReactProvider>
+
+  
   );
 }
 

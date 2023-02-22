@@ -1,13 +1,12 @@
 import {
     Box,
-    Button,
     IconButton,
     Typography,
     useTheme,
     useMediaQuery,
   } from "@mui/material";
   import Grid from "@mui/material/Unstable_Grid2";
-  import { tokens } from "/Applications/GitHub/DAO2/my-app/src/DashTheme.js";
+  import { tokens, useMode } from "/Applications/GitHub/DAO2/my-app/src/DashTheme.js";
   import { mockTransactions } from "/Applications/GitHub/DAO2/my-app/src/data/mockData.js";
   import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
   import EmailIcon from "@mui/icons-material/Email";
@@ -20,12 +19,18 @@ import {
   import StatBox from "/Applications/GitHub/DAO2/my-app/src/components/reports/StatBox.jsx";
   import ProgressCircle from "/Applications/GitHub/DAO2/my-app/src/components/reports/ProgressCircle.jsx";
   import Header from "/Applications/GitHub/DAO2/my-app/src/components/reports/Header.jsx";
+  import { dark } from "@mui/material/styles/createPalette";
+
+  
+  
   
   const Home = () => {
-    const theme = useTheme();
+    const theme = useTheme() ;
     const smScreen = useMediaQuery(theme.breakpoints.up("sm"));
     const colors = tokens(theme.palette.mode);
+
     return (
+
       <Box m="20px">
         {/* HEADER */}
   
@@ -36,21 +41,10 @@ import {
           alignItems={smScreen ? "center" : "start"}
           m="10px 0"
         >
-          <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
+          <Header title="DAO Metrics" subtitle="Welcome to your dashboard"/>
   
           <Box>
-            <Button
-              sx={{
-                backgroundColor: colors.blueAccent[700],
-                color: colors.grey[100],
-                fontSize: "14px",
-                fontWeight: "bold",
-                padding: "10px 20px",
-              }}
-            >
-              <DownloadOutlinedIcon sx={{ mr: "10px" }} />
-              Download Reports
-            </Button>
+            
           </Box>
         </Box>
   
@@ -59,7 +53,7 @@ import {
           <Grid xs={12} sm={12} md={6} lg={3} xl={3}>
             <Box
               width="100%"
-              backgroundColor={colors.primary[400]}
+              backgroundColor= "#1a1e27"
               display="flex"
               alignItems="center"
               justifyContent="center"
@@ -80,7 +74,7 @@ import {
           <Grid xs={12} sm={12} md={6} lg={3} xl={3}>
             <Box
               width="100%"
-              backgroundColor={colors.primary[400]}
+              backgroundColor= "#1a1e27"
               display="flex"
               alignItems="center"
               justifyContent="center"
@@ -101,7 +95,7 @@ import {
           <Grid xs={12} sm={12} md={6} lg={3} xl={3}>
             <Box
               width="100%"
-              backgroundColor={colors.primary[400]}
+              backgroundColor= "#1a1e27"
               display="flex"
               alignItems="center"
               justifyContent="center"
@@ -122,7 +116,7 @@ import {
           <Grid xs={12} sm={12} md={6} lg={3} xl={3}>
             <Box
               width="100%"
-              backgroundColor={colors.primary[400]}
+              backgroundColor= "#1a1e27"
               display="flex"
               alignItems="center"
               justifyContent="center"
@@ -151,7 +145,7 @@ import {
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
             <Grid xs={12}>
-              <Box backgroundColor={colors.primary[400]}>
+              <Box backgroundColor="#1a1e27">
                 <Box
                   mt="25px"
                   p="0 30px"
@@ -189,7 +183,7 @@ import {
               </Box>
             </Grid>
             <Grid xs={12} sm={12} md={6}>
-              <Box backgroundColor={colors.primary[400]} p="30px">
+              <Box backgroundColor= "#1a1e27" p="30px">
                 <Typography variant="h5" fontWeight="600">
                   Campaign
                 </Typography>
@@ -214,7 +208,7 @@ import {
               </Box>
             </Grid>
             <Grid xs={12} sm={12} md={6}>
-              <Box backgroundColor={colors.primary[400]}>
+              <Box backgroundColor= "#1a1e27">
                 <Typography
                   variant="h5"
                   fontWeight="600"
@@ -228,7 +222,7 @@ import {
               </Box>
             </Grid>
             <Grid xs={12}>
-              <Box backgroundColor={colors.primary[400]} padding="30px">
+              <Box backgroundColor= "#1a1e27" padding="30px">
                 <Typography
                   variant="h5"
                   fontWeight="600"
@@ -244,7 +238,7 @@ import {
           </Grid>
           <Grid xs={12} sm={12} md={4} lg={4} xl={4}>
             <Box
-              backgroundColor={colors.primary[400]}
+              backgroundColor="#1a1e27"
               maxHeight="100vh"
               overflow="auto"
               m="25px 0 0 0"
@@ -302,6 +296,8 @@ import {
           </Grid>
         </Grid>
       </Box>
+      
+    
     );
   };
   
