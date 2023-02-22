@@ -2,14 +2,15 @@ import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-import { mockDataInvoices } from "../../data/mockData";
-
+import { mockDataTeam } from "../../data/mockData";
+import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
+import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
+import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
 
-const Invoices = () => {
+const Groups = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
   const columns = [
     { field: "id", headerName: "Id" },
     {
@@ -18,23 +19,49 @@ const Invoices = () => {
       width: 200,
       cellClassName: "name-column--cell",
     },
-    { field: "email", headerName: "Email", width: 200 },
-    { field: "phone", headerName: "Phone Number", width: 100 },
-
     {
-      field: "cost",
-      headerName: "Cost",
+      field: "age",
+      headerName: "Age",
+      type: "number",
+      headerAlign: "left",
+      align: "left",
+    },
+    { field: "phone", headerName: "Phone Number", width: 100 },
+    { field: "email", headerName: "Email", width: 200 },
+    {
+      field: "access",
+      headerName: "Access Llvel",
       width: 100,
-      renderCell: ({ row: { cost } }) => {
-        return <Typography color={colors.greenAccent[500]}>${cost}</Typography>;
+      renderCell: ({ row: { access } }) => {
+        return (
+          <Box
+            width="100%"
+            m="0 auto"
+            p="5px"
+            display="flex"
+            justifyContent="center"
+            backgroundColor={
+              access === "admin"
+                ? colors.greenAccent[600]
+                : colors.greenAccent[800]
+            }
+            borderRadius="4px"
+          >
+            {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
+            {access === "manager" && <SecurityOutlinedIcon />}
+            {access === "user" && <LockOpenOutlinedIcon />}
+            <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+              {access}
+            </Typography>
+          </Box>
+        );
       },
     },
-    { field: "date", headerName: "Date", width: 100 },
   ];
   return (
     <Box m="20px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="INVOICES" subtitle="welcome to you Invoices" />
+        <Header title="TEAM" subtitle="welcome to you Team" />
       </Box>
       <Box
         m="8px 0 0 0"
@@ -63,15 +90,12 @@ const Invoices = () => {
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
           },
-          "& .MuiChackbox-root": {
-            color: `${colors.greenAccent[200]} !important`,
-          },
         }}
       >
-        <DataGrid checkboxSelection rows={mockDataInvoices} columns={columns} />
+        <DataGrid rows={mockDataTeam} columns={columns} />
       </Box>
     </Box>
   );
 };
 
-export default Invoices;
+export default Groups;

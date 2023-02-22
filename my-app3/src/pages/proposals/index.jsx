@@ -6,7 +6,7 @@ import { mockDataContacts } from "../../data/mockData";
 
 import Header from "../../components/Header";
 
-const Contacts = () => {
+const Proposals = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
@@ -80,4 +80,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default Proposals;

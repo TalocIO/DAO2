@@ -6,23 +6,22 @@ import { MyProSidebarProvider } from "./pages/global/sidebar/sidebarContext";
 
 
 import Dashboard from "./pages/dashboard";
-import Team from "./pages/team";
-import Invoices from "./pages/invoices";
-import Contacts from "./pages/contacts";
-import Form from "./pages/form";
-import Calendar from "./pages/calendar";
-import Bar from "./pages/bar";
-import Line from "./pages/line";
-import Pie from "./pages/pie";
-import FAQ from "./pages/faq";
-import Geography from "./pages/geography";
+import Groups from "./pages/groups";
+import Transactions from "./pages/transactions";
+import Proposals from "./pages/proposals";
+import Profile from "./pages/profile";
+import Market from "./pages/market";
+import Page1 from "./pages/page1";
+import Page3 from "./pages/page3";
+import Page2 from "./pages/page2";
+import Vote from "./pages/vote";
+import Page4 from "./pages/page4";
 
 import { Web3ReactProvider } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
-import ConnectWallet from '/Applications/GitHub/DAO2/my-app2/src/components/ConnectWallet.js';
-import WalletInfo from '/Applications/GitHub/DAO2/my-app2/src/components/WalletInfo.js';
 
-import '/Applications/GitHub/DAO2/my-app2/src/app.css';
+
+import '/Applications/GitHub/DAO2/my-app3/src/app.css';
 
 
 
@@ -47,16 +46,16 @@ function App() {
               
               <Routes>
                 <Route path="/" element={<Dashboard />} />
-                <Route path="/team" element={<Team />} />
-                <Route path="/contacts" element={<Contacts />} />
-                <Route path="/invoices" element={<Invoices />} />
-                <Route path="/form" element={<Form />} />
-                <Route path="/bar" element={<Bar />} />
-                <Route path="/pie" element={<Pie />} />
-                <Route path="/line" element={<Line />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/calendar" element={<Calendar />} />
-                <Route path="/geography" element={<Geography />} />
+                <Route path="/groups" element={<Groups />} />
+                <Route path="/proposals" element={<Proposals />} />
+                <Route path="/transactions" element={<Transactions />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/page1" element={<Page1 />} />
+                <Route path="/page2" element={<Page2 />} />
+                <Route path="/page3" element={<Page3 />} />
+                <Route path="/vote" element={<Vote />} />
+                <Route path="/market" element={<Market />} />
+                <Route path="/page4" element={<Page4 />} />
               </Routes>
             </main>
           </div>
