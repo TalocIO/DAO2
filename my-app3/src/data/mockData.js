@@ -270,130 +270,81 @@ export const mockTransactions = [
   {
     txId: "01e4dsa",
     user: "johndoe",
-    date: "2021-09-01",
+    date: "2023-20-01",
     cost: "43.95"
   },
   {
     txId: "0315dsaa",
     user: "jackdower",
-    date: "2022-04-01",
+    date: "2023-19-01",
     cost: "133.45"
   },
   {
     txId: "01e4dsa",
     user: "aberdohnny",
-    date: "2021-09-01",
+    date: "2023-18-01",
     cost: "43.95"
   },
   {
     txId: "51034szv",
     user: "goodmanave",
-    date: "2022-11-05",
+    date: "2023-17-01",
     cost: "200.95"
   },
   {
     txId: "0a123sb",
     user: "stevebower",
-    date: "2022-11-02",
+    date: "2023-16-01",
     cost: "13.55"
   },
   {
     txId: "01e4dsa",
     user: "aberdohnny",
-    date: "2021-09-01",
+    date: "2023-15-01",
     cost: "43.95"
   },
   {
     txId: "120s51a",
     user: "wootzifer",
-    date: "2019-04-15",
+    date: "2023-14-01",
     cost: "24.20"
   },
   {
     txId: "0315dsaa",
     user: "jackdower",
-    date: "2022-04-01",
+    date: "2023-13-01",
     cost: "133.45"
   }
 ];
 
 export const mockBarData = [
+  
   {
-    country: "AD",
-    "hot dog": 137,
-    "hot dogColor": "hsl(229, 70%, 50%)",
-    burger: 96,
-    burgerColor: "hsl(296, 70%, 50%)",
-    kebab: 72,
-    kebabColor: "hsl(97, 70%, 50%)",
-    donut: 140,
-    donutColor: "hsl(340, 70%, 50%)"
-  },
-  {
-    country: "AE",
-    "hot dog": 55,
-    "hot dogColor": "hsl(307, 70%, 50%)",
-    burger: 28,
-    burgerColor: "hsl(111, 70%, 50%)",
-    kebab: 58,
-    kebabColor: "hsl(273, 70%, 50%)",
-    donut: 29,
-    donutColor: "hsl(275, 70%, 50%)"
-  },
-  {
-    country: "AF",
-    "hot dog": 109,
-    "hot dogColor": "hsl(72, 70%, 50%)",
-    burger: 23,
-    burgerColor: "hsl(96, 70%, 50%)",
-    kebab: 34,
-    kebabColor: "hsl(106, 70%, 50%)",
-    donut: 152,
-    donutColor: "hsl(256, 70%, 50%)"
-  },
-  {
-    country: "AG",
-    "hot dog": 133,
-    "hot dogColor": "hsl(257, 70%, 50%)",
-    burger: 52,
-    burgerColor: "hsl(326, 70%, 50%)",
-    kebab: 43,
-    kebabColor: "hsl(110, 70%, 50%)",
-    donut: 83,
-    donutColor: "hsl(9, 70%, 50%)"
-  },
-  {
-    country: "AI",
-    "hot dog": 81,
-    "hot dogColor": "hsl(190, 70%, 50%)",
-    burger: 80,
+    country: "RE NFTs",
+    "Non-members": 45,
+    "hot dogColor": "hsl(54, 70%, 50%)",
+    Members: 95,
     burgerColor: "hsl(325, 70%, 50%)",
-    kebab: 112,
-    kebabColor: "hsl(54, 70%, 50%)",
-    donut: 35,
-    donutColor: "hsl(285, 70%, 50%)"
+    Taloc: 124,
+    kebabColor: "hsl(190, 70%, 50%)",
   },
   {
-    country: "AL",
-    "hot dog": 66,
-    "hot dogColor": "hsl(208, 70%, 50%)",
-    burger: 111,
-    burgerColor: "hsl(334, 70%, 50%)",
-    kebab: 167,
-    kebabColor: "hsl(182, 70%, 50%)",
-    donut: 18,
-    donutColor: "hsl(76, 70%, 50%)"
+    country: "Coins",
+    "Non-members": 66,
+    "hot dogColor":  "hsl(54, 70%, 50%)",
+    Members: 111,
+    burgerColor: "hsl(325, 70%, 50%)",
+    Taloc: 167,
+    kebabColor: "hsl(190, 70%, 50%)",
   },
   {
-    country: "AM",
-    "hot dog": 80,
-    "hot dogColor": "hsl(87, 70%, 50%)",
-    burger: 47,
-    burgerColor: "hsl(141, 70%, 50%)",
-    kebab: 158,
-    kebabColor: "hsl(224, 70%, 50%)",
-    donut: 49,
-    donutColor: "hsl(274, 70%, 50%)"
+    country: "Bus NFTs",
+    "Non-members": 60,
+    "hot dogColor":  "hsl(54, 70%, 50%)",
+    Members: 82,
+    burgerColor: "hsl(325, 70%, 50%)",
+    Taloc: 109,
+    kebabColor: "hsl(190, 70%, 50%)",
   }
 ];
 
@@ -432,163 +383,163 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "japan",
+    id: "Coins",
     color: tokens("dark").greenAccent[500],
     data: [
       {
-        x: "plane",
+        x: "Jan",
         y: 101
       },
       {
-        x: "helicopter",
+        x: "Feb",
         y: 75
       },
       {
-        x: "boat",
+        x: "Mar",
         y: 36
       },
       {
-        x: "train",
+        x: "Apr",
         y: 216
       },
       {
-        x: "subway",
+        x: "May",
         y: 35
       },
       {
-        x: "bus",
+        x: "Jun",
         y: 236
       },
       {
-        x: "car",
+        x: "Jul",
         y: 88
       },
       {
-        x: "moto",
+        x: "Aug",
         y: 232
       },
       {
-        x: "bicycle",
+        x: "Sep",
         y: 281
       },
       {
-        x: "horse",
+        x: "Oct",
         y: 1
       },
       {
-        x: "skateboard",
+        x: "Nov",
         y: 35
       },
       {
-        x: "others",
+        x: "Dec",
         y: 14
       }
     ]
   },
   {
-    id: "france",
+    id: "Businesses",
     color: tokens("dark").blueAccent[300],
     data: [
       {
-        x: "plane",
+        x: "Jan",
         y: 212
       },
       {
-        x: "helicopter",
+        x: "Feb",
         y: 190
       },
       {
-        x: "boat",
+        x: "Mar",
         y: 270
       },
       {
-        x: "train",
+        x: "Apr",
         y: 9
       },
       {
-        x: "subway",
+        x: "May",
         y: 75
       },
       {
-        x: "bus",
+        x: "Jun",
         y: 175
       },
       {
-        x: "car",
+        x: "Jul",
         y: 33
       },
       {
-        x: "moto",
+        x: "Aug",
         y: 189
       },
       {
-        x: "bicycle",
+        x: "Sep",
         y: 97
       },
       {
-        x: "horse",
+        x: "Oct",
         y: 87
       },
       {
-        x: "skateboard",
+        x: "Nov",
         y: 299
       },
       {
-        x: "others",
+        x: "Dec",
         y: 251
       }
     ]
   },
   {
-    id: "us",
+    id: "Real Estate",
     color: tokens("dark").redAccent[200],
     data: [
       {
-        x: "plane",
+        x: "Jan",
         y: 191
       },
       {
-        x: "helicopter",
+        x: "Feb",
         y: 136
       },
       {
-        x: "boat",
+        x: "Mar",
         y: 91
       },
       {
-        x: "train",
+        x: "Apr",
         y: 190
       },
       {
-        x: "subway",
+        x: "May",
         y: 211
       },
       {
-        x: "bus",
+        x: "Jun",
         y: 152
       },
       {
-        x: "car",
+        x: "Jul",
         y: 189
       },
       {
-        x: "moto",
+        x: "Aug",
         y: 152
       },
       {
-        x: "bicycle",
+        x: "Sep",
         y: 8
       },
       {
-        x: "horse",
+        x: "Oct",
         y: 197
       },
       {
-        x: "skateboard",
+        x: "Nov",
         y: 107
       },
       {
-        x: "others",
+        x: "Dec",
         y: 170
       }
     ]

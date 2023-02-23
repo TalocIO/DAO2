@@ -5,7 +5,7 @@ import MyProSidebar from "./MyProSidebar";
 const SidebarContext = createContext({});
 
 export const MyProSidebarProvider = ({ children }) => {
-  const [sidebarRTL, setSidebarRTL] = useState(false);
+  //const [sidebarRTL, setSidebarRTL] = useState(false);
   const [sidebarBackgroundColor, setSidebarBackgroundColor] =
     useState(undefined);
   const [sidebarImage, setSidebarImage] = useState(undefined);
@@ -19,14 +19,14 @@ export const MyProSidebarProvider = ({ children }) => {
           sidebarImage,
           setSidebarImage,
 
-          sidebarRTL,
-          setSidebarRTL,
+         // sidebarRTL,
+         // setSidebarRTL,
         }}
       >
         <div
           style={{
             display: "flex",
-            flexDirection: sidebarRTL ? "row-reverse" : "row",
+            //flexDirection: sidebarRTL ? "row-reverse" : "row",
           }}
         >
           <MyProSidebar />

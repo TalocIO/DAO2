@@ -19,11 +19,11 @@ import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
-import SwitchRightOutlinedIcon from "@mui/icons-material/SwitchRightOutlined";
-import SwitchLeftOutlinedIcon from "@mui/icons-material/SwitchLeftOutlined";
+
+
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -71,7 +71,7 @@ const MyProSidebar = () => {
           backgroundColor: "transparent !important",
         },
         "& .menu-item:hover": {
-          color: `${colors.blueAccent[500]} !important`,
+          color: `${colors.greenAccent[500]} !important`,
           backgroundColor: "transparent !important",
         },
         "& .menu-item.active": {
@@ -88,20 +88,12 @@ const MyProSidebar = () => {
       >
         <Menu iconshape="square">
           <MenuItem
-            icon={
-              collapsed ? (
-                <MenuOutlinedIcon onClick={() => collapseSidebar()} />
-              ) 
-              : sidebarRTL ? (
-                <SwitchLeftOutlinedIcon
-                  onClick={() => setSidebarRTL(!sidebarRTL)}
-                />
-              ) : (
-                <SwitchRightOutlinedIcon
-                  onClick={() => setSidebarRTL(!sidebarRTL)}
-                />
-              ) 
-              }
+           
+           icon={
+            
+              <MenuOutlinedIcon onClick={() => collapseSidebar()} />
+            
+          }
 
             style={{
               margin: "10px 0 20px 0",
@@ -121,7 +113,7 @@ const MyProSidebar = () => {
                     broken ? () => toggleSidebar() : () => collapseSidebar()
                   }
                 >
-                  <CloseOutlinedIcon />
+                  <CloseFullscreenIcon />
                 </IconButton>
               </Box>
             )}
@@ -253,3 +245,4 @@ const MyProSidebar = () => {
 };
 
 export default MyProSidebar;
+
