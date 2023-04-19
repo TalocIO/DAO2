@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "v18.14.0 ",
-    "yarn": "v1.22.19"},
+    "node": "18.14.0 ",
+    "yarn": "1.22.19"},
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
