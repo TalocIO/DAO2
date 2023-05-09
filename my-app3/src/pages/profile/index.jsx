@@ -2,9 +2,12 @@ import React from 'react'
 import { Box, Button, TextField } from '@mui/material'
 import Header from "../../components/Header";
 import MultiStep from "react-multistep";
-import { StepOne } from "/Applications/GitHub/DAO2/my-app3/src/components/step-one.jsx";
-import { StepTwo } from "/Applications/GitHub/DAO2/my-app3/src/components/step-two.jsx";
-import { StepThree } from "/Applications/GitHub/DAO2/my-app3/src/components/step-three.jsx";
+//import { StepOne } from "/Applications/GitHub/DAO2/my-app3/src/components/step-one.jsx";
+import { StepOne } from "../../components/step-one.jsx";
+//import { StepTwo } from "/Applications/GitHub/DAO2/my-app3/src/components/step-two.jsx";
+import { StepTwo } from "../../components/step-two.jsx";
+//import { StepThree } from "/Applications/GitHub/DAO2/my-app3/src/components/step-three.jsx";
+import { StepThree } from "../../components/step-three.jsx";
 //import { StepFour } from "/Applications/GitHub/DAO2/my-app3/src/components/step-four.jsx";
 
 //import '/Applications/GitHub/DAO2/my-app3/src/app.css'
