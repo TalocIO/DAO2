@@ -7,7 +7,8 @@ import { StepTwo } from "/Applications/GitHub/DAO2/my-app3/src/components/step-t
 import { StepThree } from "/Applications/GitHub/DAO2/my-app3/src/components/step-three.jsx";
 //import { StepFour } from "/Applications/GitHub/DAO2/my-app3/src/components/step-four.jsx";
 
-import '/Applications/GitHub/DAO2/my-app3/src/app.css'
+//import '/Applications/GitHub/DAO2/my-app3/src/app.css'
+import "../../app.css"
 
 const Profile = () => {
   
