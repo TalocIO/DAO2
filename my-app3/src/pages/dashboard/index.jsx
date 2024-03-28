@@ -16,7 +16,6 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TokenRoundedIcon from '@mui/icons-material/TokenRounded';
 import Header from "../../components/Header";
 import LineChart from "../../components/LineChart";
-import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
@@ -193,7 +192,7 @@ const Dashboard = () => {
           <Grid xs={12} sm={12} md={6}>
             <Box backgroundColor={colors.primary[400]} p="30px">
               <Typography variant="h5" fontWeight="600">
-                Expenses
+                Operating Cost
               </Typography>
               <Box
                 display="flex"
@@ -209,9 +208,7 @@ const Dashboard = () => {
                 >
                   $500M Total
                 </Typography>
-                <Typography>
-                  Includes extra misc expenditures and costs
-                </Typography>
+                
               </Box>
             </Box>
           </Grid>
@@ -229,27 +226,7 @@ const Dashboard = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid xs={12}>
-            <Box backgroundColor={colors.primary[400]} padding="30px">
-              <Typography
-                variant="h5"
-                fontWeight="600"
-                sx={{ marginBottom: "15px" }}
-              >
-                Member Distribution
-              </Typography>
-              <Typography
-                  variant="h5"
-                  color={colors.greenAccent[500]}
-                  sx={{ mt: "15px" }}
-                >
-                  20 Million Total
-                </Typography>
-              <Box height="200px">
-                <GeographyChart isDashboard={true} />
-              </Box>
-            </Box>
-          </Grid>
+          
         </Grid>
         <Grid xs={12} sm={12} md={4} lg={4} xl={4}>
           <Box
