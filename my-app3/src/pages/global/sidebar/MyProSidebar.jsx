@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import { tokens } from "../../../theme";
 import { useTheme, Box, Typography, IconButton } from "@mui/material";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import GroupsIcon from '@mui/icons-material/Groups';
 import HowToVoteIcon from '@mui/icons-material/HowToVote';
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
@@ -175,68 +174,17 @@ const MyProSidebar = () => {
               setSelected={setSelected}
             />
             
-            <Item
-              title="Proposals"
-              to="/proposals"
-              icon={<HowToVoteIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
 
             <Item
-              title="Groups"
-              to="/groups"
-              icon={<GroupsIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            
-
-            <Item
-              title="Vote"
-              to="/vote"
+              title="FAQ"
+              to="/faq"
               icon={<BallotIcon />}
               selected={selected}
               setSelected={setSelected}
             />
 
-            <Item
-              title="Transactions"
-              to="/transactions"
-              icon={<ReceiptOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
 
            
-            <Item
-              title="Page1"
-              to="/page1"
-              icon={<BarChartOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Page2"
-              to="/page2"
-              icon={<PieChartOutlineOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Page3"
-              to="/page3"
-              icon={<TimelineOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Page4"
-              to="/page4"
-              icon={<MapOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
           </Box>
         </Menu>
       </Sidebar>

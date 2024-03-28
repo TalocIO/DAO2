@@ -269,58 +269,58 @@ export const mockDataInvoices = [
 export const mockTransactions = [
   {
     txId: "01e4dsa",
-    user: "johndoe",
+    user: "Coin",
     date: "2023-20-01",
-    cost: "43.95"
+    cost: "550"
   },
   {
     txId: "0315dsaa",
-    user: "jackdower",
+    user: "Coin",
     date: "2023-19-01",
-    cost: "133.45"
+    cost: "133"
   },
   {
     txId: "01e4dsa",
-    user: "aberdohnny",
+    user: "Property",
     date: "2023-18-01",
-    cost: "43.95"
+    cost: "350,000"
   },
   {
     txId: "51034szv",
-    user: "goodmanave",
+    user: "Coin",
     date: "2023-17-01",
     cost: "200.95"
   },
   {
     txId: "0a123sb",
-    user: "stevebower",
+    user: "Property",
     date: "2023-16-01",
-    cost: "13.55"
+    cost: "385,000"
   },
   {
     txId: "01e4dsa",
-    user: "aberdohnny",
+    user: "Property",
     date: "2023-15-01",
-    cost: "43.95"
+    cost: "415,000"
   },
   {
     txId: "120s51a",
-    user: "wootzifer",
+    user: "coin",
     date: "2023-14-01",
     cost: "24.20"
   },
   {
     txId: "0315dsaa",
-    user: "jackdower",
+    user: "Property",
     date: "2023-13-01",
-    cost: "133.45"
+    cost: "490,000"
   }
 ];
 
 export const mockBarData = [
   
   {
-    country: "RE NFTs",
+    country: "NFTs",
     "Non-members": 45,
     "hot dogColor": "hsl(54, 70%, 50%)",
     Members: 95,
@@ -338,12 +338,12 @@ export const mockBarData = [
     kebabColor: "hsl(190, 70%, 50%)",
   },
   {
-    country: "Bus NFTs",
-    "Non-members": 60,
+    country: "Property",
+    "Non-members": 0,
     "hot dogColor":  "hsl(54, 70%, 50%)",
-    Members: 82,
+    Members: 10,
     burgerColor: "hsl(325, 70%, 50%)",
-    Taloc: 109,
+    Taloc: 200,
     kebabColor: "hsl(190, 70%, 50%)",
   }
 ];
@@ -383,7 +383,7 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "Coins",
+    id: "Other Crypto",
     color: tokens("dark").greenAccent[500],
     data: [
       {
@@ -437,7 +437,7 @@ export const mockLineData = [
     ]
   },
   {
-    id: "Businesses",
+    id: "Native Coin",
     color: tokens("dark").blueAccent[300],
     data: [
       {
